@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ShareSomething</string>
+    <string name="last_sent_title_text">Last message sent:</string>
+    <string name="send_text_hint">Share something!</string>
+    <string name="share_button_text">SHARE</string>
+    <string name="share_intent_title">Share via:</string>
+    <string name="time_sent">Date/Time sent:\u0020</string>
+</resources>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 
+	main.xml
+	Defines structural layout for the MainActivity screen
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    
+    <!-- First set of elements on the screen contains the fields for user to 
+    select media and text to send, along with the button to execute the send. -->
+    <LinearLayout 
+    	android:orientation="vertical"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content">
+    	<LinearLayout 
+    		android:orientation="horizontal"
+    		android:layout_width="fill_parent"
+    		android:layout_height="wrap_content">
+    		<!-- Button for user to select an image to send --> 
+    		<ImageButton android:id="@+id/send_image"
+    			android:src="@drawable/ic_photo"
+    			android:layout_width="80dp"
+    			android:layout_height="80dp"/>
+    		<!-- Text box for user to enter text to send --> 
+    		<EditText android:id="@+id/send_text"
+    			android:hint="@string/send_text_hint"
+    			android:layout_width="fill_parent"
+    			android:layout_height="wrap_content"/>
+    	</LinearLayout>
+    	<!-- Button will bring up list of Intents to send media and text -->
+    	<Button android:id="@+id/share_button"
+    		android:text="@string/share_button_text"
+    		android:layout_width="fill_parent"
+    		android:layout_height="wrap_content"/>
+    </LinearLayout>
+    
+    <!-- Cheap way of drawing a border.  Using a resource would make it prettier -->
+    <View 
+    	android:layout_width="fill_parent"
+    	android:layout_height="1dp"
+    	android:background="#FFFFFFFF"/>
+    <TextView 
+    	android:text="@string/last_sent_title_text"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"/>
+    
+    <!-- Second set of elements displays the data the user last sent -->
+    <LinearLayout
+    	android:orientation="vertical"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content">
+    	<LinearLayout 
+    		android:orientation="horizontal"
+    		android:layout_width="fill_parent"
+    		android:layout_height="wrap_content">
+    		<!-- Displays the image that was last sent -->
+    		<ImageView android:id="@+id/last_sent_image"
+    			android:layout_width="60dp"
+    			android:layout_height="60dp"
+    			android:paddingRight="5dp"/>
+    		<!-- Displays text that was last sent -->
+    		<TextView android:id="@+id/last_sent_msg"
+    			android:layout_width="fill_parent"
+    			android:layout_height="wrap_content"/>
+    	</LinearLayout>
+    	<!-- Display the time last message was sent -->
+    	<TextView android:id="@+id/last_sent_time"
+    		android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</LinearLayout>
